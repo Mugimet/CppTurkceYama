@@ -1,397 +1,397 @@
-// cppturkceyama.cpp : Statik kitaplık için işlevleri tanımlar.
+ï»¿// cppturkceyama.cpp : Statik kitaplÄ±k iÃ§in iÅŸlevleri tanÄ±mlar.
 //
 
 //#include "pch.h"
 //#include "framework.h"
-// C++TürkçeYaması.cpp : Bu dosya 'main' işlevi içeriyor. Program yürütme orada başlayıp biter.
+// C++TÃ¼rkÃ§eYamasÄ±.cpp : Bu dosya 'main' iÅŸlevi iÃ§eriyor. Program yÃ¼rÃ¼tme orada baÅŸlayÄ±p biter.
 //
-// C++ Türkçe Yaması
-// Bu kod, C++ dilinin temel sözdizimini ve standart kütüphane isimlerini Türkçe terimlerle değiştirmek için tasarlanmıştır.
-// Bu, C++ kodunu Türkçe konuşan geliştiriciler için daha erişilebilir hale getirmeyi amaçlar.
+// C++ TÃ¼rkÃ§e YamasÄ±
+// Bu kod, C++ dilinin temel sÃ¶zdizimini ve standart kÃ¼tÃ¼phane isimlerini TÃ¼rkÃ§e terimlerle deÄŸiÅŸtirmek iÃ§in tasarlanmÄ±ÅŸtÄ±r.
+// Bu, C++ kodunu TÃ¼rkÃ§e konuÅŸan geliÅŸtiriciler iÃ§in daha eriÅŸilebilir hale getirmeyi amaÃ§lar.
 
-// --- Kütüphane İsimleri Türkçeleştirme ---
+// --- KÃ¼tÃ¼phane Ä°simleri TÃ¼rkÃ§eleÅŸtirme ---
 #define PENCERELER <windows.h>
-#define ALGORİTMA <algorithm>
-#define DİZİ <array>
-#define ATOMİK <atomic>
-#define BARİYER <barrier>
-#define BİT <bit>
+#define ALGORÄ°TMA <algorithm>
+#define DÄ°ZÄ° <array>
+#define ATOMÄ°K <atomic>
+#define BARÄ°YER <barrier>
+#define BÄ°T <bit>
 #define ZAMAN <chrono>
-#define KODLAMA_DÖNÜŞTÜRME <codecvt>
-#define KARMAŞIK <complex>
+#define KODLAMA_DÃ–NÃœÅTÃœRME <codecvt>
+#define KARMAÅIK <complex>
 #define KAVRAMLAR <concepts>
-#define KOŞUL_DEĞİŞKENİ <condition_variable>
+#define KOÅUL_DEÄÄ°ÅKENÄ° <condition_variable>
 #define ASENKRON <coroutine>
 #define CSETJMP <csetjmp>
-#define CSİNYAL <csignal>
-#define CSTANDART_ARGÜMANLAR <cstdarg>
+#define CSÄ°NYAL <csignal>
+#define CSTANDART_ARGÃœMANLAR <cstdarg>
 #define CMANTIK <cstdbool>
 #define CBOYUT <cstddef>
-#define CTİP <cstdint>
-#define CSTDİO <cstdio>
-#define CSTDKÜT <cstdlib>
+#define CTÄ°P <cstdint>
+#define CSTDÄ°O <cstdio>
+#define CSTDKÃœT <cstdlib>
 #define CYAZI <cstring>
 #define CZAMAN <ctime>
-#define ÇİFT_KUYRUK <deque>
-#define İSTİSNA <exception>
-#define DOSYA_SİSTEMİ <filesystem>
-#define BİÇİMLENDİRME <format>
-#define İLERİ_LİSTE <forward_list>
-#define DOSYA_AKIŞI <fstream>
-#define FONKSİYONEL <functional>
+#define Ã‡Ä°FT_KUYRUK <deque>
+#define Ä°STÄ°SNA <exception>
+#define DOSYA_SÄ°STEMÄ° <filesystem>
+#define BÄ°Ã‡Ä°MLENDÄ°RME <format>
+#define Ä°LERÄ°_LÄ°STE <forward_list>
+#define DOSYA_AKIÅI <fstream>
+#define FONKSÄ°YONEL <functional>
 #define GELECEK <future>
-#define BAŞLATICI_LİSTESİ <initializer_list>
-#define BİÇİM <iomanip>
-#define GİRİŞ_ÇIKIŞ <ios>
-#define GİRİŞ_ÇIKIŞ_YÖNLENDİRME <iosfwd>
-#define GİRİŞ_AKIŞI <iostream>
-#define GİRİŞ_AKIŞI_TÜRÜ <istream>
-#define YİNELEYİCİ <iterator>
+#define BAÅLATICI_LÄ°STESÄ° <initializer_list>
+#define BÄ°Ã‡Ä°M <iomanip>
+#define GÄ°RÄ°Å_Ã‡IKIÅ <ios>
+#define GÄ°RÄ°Å_Ã‡IKIÅ_YÃ–NLENDÄ°RME <iosfwd>
+#define GÄ°RÄ°Å_AKIÅI <iostream>
+#define GÄ°RÄ°Å_AKIÅI_TÃœRÃœ <istream>
+#define YÄ°NELEYÄ°CÄ° <iterator>
 #define SINIRLAR <limits>
-#define LİSTE <list>
+#define LÄ°STE <list>
 #define YEREL <locale>
-#define HARİTA <map>
+#define HARÄ°TA <map>
 #define BELLEK <memory>
-#define KİLİT <mutex>
-#define YENİ <new>
+#define KÄ°LÄ°T <mutex>
+#define YENÄ° <new>
 #define SAYISAL <numeric>
-#define İSTEĞE_BAĞLI <optional>
-#define ÇIKIŞ_AKIŞI <ostream>
+#define Ä°STEÄE_BAÄLI <optional>
+#define Ã‡IKIÅ_AKIÅI <ostream>
 #define KUYRUK <queue>
 #define RASTGELE <random>
 #define ARALIKLAR <ranges>
-#define DÜZENLİ_İFADE <regex>
-#define SINIRLANDIRILMIŞ_AYARLAYICI <scoped_allocator>
-#define KÜME <set>
-#define PAYLAŞILAN_KİLİT <shared_mutex>
+#define DÃœZENLÄ°_Ä°FADE <regex>
+#define SINIRLANDIRILMIÅ_AYARLAYICI <scoped_allocator>
+#define KÃœME <set>
+#define PAYLAÅILAN_KÄ°LÄ°T <shared_mutex>
 #define ARALIK <span>
-#define DİZİ_AKIŞI <sstream>
-#define YIĞIN <stack>
+#define DÄ°ZÄ°_AKIÅI <sstream>
+#define YIÄIN <stack>
 #define STANDART_HATA <stdexcept>
 #define DURDURMA_JETONU <stop_token>
-#define AKIŞ_ARABELLEK <streambuf>
-#define METİN <string>
-#define METİN_GÖRÜNÜMÜ <string_view>
-#define SİSTEM_HATASI <system_error>
-#define İŞ_PARÇACIĞI <thread>
+#define AKIÅ_ARABELLEK <streambuf>
+#define METÄ°N <string>
+#define METÄ°N_GÃ–RÃœNÃœMÃœ <string_view>
+#define SÄ°STEM_HATASI <system_error>
+#define Ä°Å_PARÃ‡ACIÄI <thread>
 #define DEMET <tuple>
-#define TÜR_ÖZELLİKLERİ <type_traits>
-#define TÜR_INDEKSİ <typeindex>
-#define TÜR_BİLGİSİ <typeinfo>
-#define DÜZENSİZ_HARİTA <unordered_map>
-#define DÜZENSİZ_KÜME <unordered_set>
+#define TÃœR_Ã–ZELLÄ°KLERÄ° <type_traits>
+#define TÃœR_INDEKSÄ° <typeindex>
+#define TÃœR_BÄ°LGÄ°SÄ° <typeinfo>
+#define DÃœZENSÄ°Z_HARÄ°TA <unordered_map>
+#define DÃœZENSÄ°Z_KÃœME <unordered_set>
 #define YARDIMCI <utility>
-#define DEĞER_DİZİSİ <valarray>
-#define DEĞİŞKEN <variant>
-#define VEKTÖR <vector>
+#define DEÄER_DÄ°ZÄ°SÄ° <valarray>
+#define DEÄÄ°ÅKEN <variant>
+#define VEKTÃ–R <vector>
 
-#include ALGORİTMA
-#include DİZİ
-#include ATOMİK
-#include BARİYER
-#include BİT
+#include ALGORÄ°TMA
+#include DÄ°ZÄ°
+#include ATOMÄ°K
+#include BARÄ°YER
+#include BÄ°T
 #include ZAMAN
-#include KODLAMA_DÖNÜŞTÜRME
-#include KARMAŞIK
+#include KODLAMA_DÃ–NÃœÅTÃœRME
+#include KARMAÅIK
 #include KAVRAMLAR
-#include KOŞUL_DEĞİŞKENİ
+#include KOÅUL_DEÄÄ°ÅKENÄ°
 #include ASENKRON
 #include CSETJMP
-#include CSİNYAL
-#include CSTANDART_ARGÜMANLAR
+#include CSÄ°NYAL
+#include CSTANDART_ARGÃœMANLAR
 #include CMANTIK
 #include CBOYUT
-#include CTİP
-#include CSTDİO
-#include CSTDKÜT
+#include CTÄ°P
+#include CSTDÄ°O
+#include CSTDKÃœT
 #include CYAZI
 #include CZAMAN
-#include ÇİFT_KUYRUK
-#include İSTİSNA
-#include DOSYA_SİSTEMİ
-#include BİÇİMLENDİRME
-#include İLERİ_LİSTE
-#include DOSYA_AKIŞI
-#include FONKSİYONEL
+#include Ã‡Ä°FT_KUYRUK
+#include Ä°STÄ°SNA
+#include DOSYA_SÄ°STEMÄ°
+#include BÄ°Ã‡Ä°MLENDÄ°RME
+#include Ä°LERÄ°_LÄ°STE
+#include DOSYA_AKIÅI
+#include FONKSÄ°YONEL
 #include GELECEK
-#include BAŞLATICI_LİSTESİ
-#include BİÇİM
-#include GİRİŞ_ÇIKIŞ
-#include GİRİŞ_ÇIKIŞ_YÖNLENDİRME
-#include GİRİŞ_AKIŞI
-#include GİRİŞ_AKIŞI_TÜRÜ
-#include YİNELEYİCİ
+#include BAÅLATICI_LÄ°STESÄ°
+#include BÄ°Ã‡Ä°M
+#include GÄ°RÄ°Å_Ã‡IKIÅ
+#include GÄ°RÄ°Å_Ã‡IKIÅ_YÃ–NLENDÄ°RME
+#include GÄ°RÄ°Å_AKIÅI
+#include GÄ°RÄ°Å_AKIÅI_TÃœRÃœ
+#include YÄ°NELEYÄ°CÄ°
 #include SINIRLAR
-#include LİSTE
+#include LÄ°STE
 #include YEREL
-#include HARİTA
+#include HARÄ°TA
 #include BELLEK
-#include KİLİT
-#include YENİ
+#include KÄ°LÄ°T
+#include YENÄ°
 #include SAYISAL
-#include İSTEĞE_BAĞLI
-#include ÇIKIŞ_AKIŞI
+#include Ä°STEÄE_BAÄLI
+#include Ã‡IKIÅ_AKIÅI
 #include KUYRUK
 #include RASTGELE
 #include ARALIKLAR
-#include DÜZENLİ_İFADE
-#include SINIRLANDIRILMIŞ_AYARLAYICI
-#include KÜME
-#include PAYLAŞILAN_KİLİT
+#include DÃœZENLÄ°_Ä°FADE
+#include SINIRLANDIRILMIÅ_AYARLAYICI
+#include KÃœME
+#include PAYLAÅILAN_KÄ°LÄ°T
 #include ARALIK
-#include DİZİ_AKIŞI
-#include YIĞIN
+#include DÄ°ZÄ°_AKIÅI
+#include YIÄIN
 #include STANDART_HATA
 #include DURDURMA_JETONU
-#include AKIŞ_ARABELLEK
-#include METİN
-#include METİN_GÖRÜNÜMÜ
-#include SİSTEM_HATASI
-#include İŞ_PARÇACIĞI
+#include AKIÅ_ARABELLEK
+#include METÄ°N
+#include METÄ°N_GÃ–RÃœNÃœMÃœ
+#include SÄ°STEM_HATASI
+#include Ä°Å_PARÃ‡ACIÄI
 #include DEMET
-#include TÜR_ÖZELLİKLERİ
-#include TÜR_INDEKSİ
-#include TÜR_BİLGİSİ
-#include DÜZENSİZ_HARİTA
-#include DÜZENSİZ_KÜME
+#include TÃœR_Ã–ZELLÄ°KLERÄ°
+#include TÃœR_INDEKSÄ°
+#include TÃœR_BÄ°LGÄ°SÄ°
+#include DÃœZENSÄ°Z_HARÄ°TA
+#include DÃœZENSÄ°Z_KÃœME
 #include YARDIMCI
-#include DEĞER_DİZİSİ
-#include DEĞİŞKEN
-#include VEKTÖR
+#include DEÄER_DÄ°ZÄ°SÄ°
+#include DEÄÄ°ÅKEN
+#include VEKTÃ–R
 #include <fcntl.h>
 #include <io.h>
 
-// --- Temel Türkçeleştirmeler ---
+// --- Temel TÃ¼rkÃ§eleÅŸtirmeler ---
 #define yaz std::cout<<
 #define al std::cin >>
-#define tamsayı int
+#define tamsayÄ± int
 #define harf char
-#define mantıksal bool
+#define mantÄ±ksal bool
 #define metin std::string
-#define ondalıklı float
+#define ondalÄ±klÄ± float
 #define kesirli double
 #define dizi std::array
 #define sabit const
 #define fonksiyon function
-#define sınıf class
-#define yapı struct
-#define seçim switch
+#define sÄ±nÄ±f class
+#define yapÄ± struct
+#define seÃ§im switch
 #define durum case
-#define varsayılan default
+#define varsayÄ±lan default
 
-#define eğer if
-#define değilse_eğer else if
-#define değilse else
+#define eÄŸer if
+#define deÄŸilse_eÄŸer else if
+#define deÄŸilse else
 
 #define oto auto
 
 #define genel public
-#define özel private
-#define kısıtlı protected
+#define Ã¶zel private
+#define kÄ±sÄ±tlÄ± protected
 
-#define döngü for
+#define dÃ¶ngÃ¼ for
 #define iken while
 #define uygula do
-#define çık break
+#define Ã§Ä±k break
 #define atla continue
 
-#define eşit ==
-#define farklı !=
+#define eÅŸit ==
+#define farklÄ± !=
 #define ve &&
 #define veya ||
-#define değil !
+#define deÄŸil !
 
-#define dönüş return
-#define oluştur new
+#define dÃ¶nÃ¼ÅŸ return
+#define oluÅŸtur new
 #define sil delete
 
 #define sabit const
 #define boyut sizeof
 
-#define doğru true
-#define yanlış false
-#define boş nullptr
-#define dönüşsüz void
+#define doÄŸru true
+#define yanlÄ±ÅŸ false
+#define boÅŸ nullptr
+#define dÃ¶nÃ¼ÅŸsÃ¼z void
 
-#define fırlat throw
+#define fÄ±rlat throw
 #define yakala catch
 #define dene try
 
 #define kapsam namespace
 #define harici extern
-#define iç inline
+#define iÃ§ inline
 
-#define tür_adı typedef
-#define tür_tipi typename
-#define tür_bilgisi typeid
+#define tÃ¼r_adÄ± typedef
+#define tÃ¼r_tipi typename
+#define tÃ¼r_bilgisi typeid
 
-#define sabit_önce_çalıştır constexpr
-#define zorunlu_önce_çalıştır consteval
-#define değişken_önce_çalıştır constinit
+#define sabit_Ã¶nce_Ã§alÄ±ÅŸtÄ±r constexpr
+#define zorunlu_Ã¶nce_Ã§alÄ±ÅŸtÄ±r consteval
+#define deÄŸiÅŸken_Ã¶nce_Ã§alÄ±ÅŸtÄ±r constinit
 
-#define kalıp template
-#define kullanım using
+#define kalÄ±p template
+#define kullanÄ±m using
 
-#define arkadaş friend
+#define arkadaÅŸ friend
 #define sanal virtual
 
 #define yeniden_yorumla reinterpret_cast
-#define güvenli_dönüşüm const_cast
-#define dinamik_dönüştür dynamic_cast
-#define sabit_değiştir static_cast
+#define gÃ¼venli_dÃ¶nÃ¼ÅŸÃ¼m const_cast
+#define dinamik_dÃ¶nÃ¼ÅŸtÃ¼r dynamic_cast
+#define sabit_deÄŸiÅŸtir static_cast
 
-#define modül module
+#define modÃ¼l module
 #define getir import
 
-// --- Yazım Kolaylaştırmaları ---
+// --- YazÄ±m KolaylaÅŸtÄ±rmalarÄ± ---
 #define std_sil using namespace std
 #define ana int main()
-#define boş_bırak std::cout<<std::endl;
+#define boÅŸ_bÄ±rak std::cout<<std::endl;
 #ifdef _WIN32
 #define konsol_bekle system("pause");
 #define konsol_temizle system("cls");
 #else
-#define konsol_bekle system("read -p \"Devam etmek için bir tuşa basın...\" -n 1 -s");
+#define konsol_bekle system("read -p \"Devam etmek iÃ§in bir tuÅŸa basÄ±n...\" -n 1 -s");
 #define konsol_temizle system("clear");
 #endif
 
 
-// --- <cstring> Kütüphanesi ---
-#define cuzunluk strlen             // karakter_dizisi_uzunluğu
+// --- <cstring> KÃ¼tÃ¼phanesi ---
+#define cuzunluk strlen             // karakter_dizisi_uzunluÄŸu
 #define cmetin_kopyala strcpy             // dizi_kopyala
-#define ckopyala_sınır strncpy      // sınır_kadar_kopyala
-#define cmetin_birleştir strcat           // dizi_birleştir
-#define cbirleştir_sınır strncat    // sınır_kadar_birleştir
-#define ckarşılaştır strcmp         // dizi_karşılaştır
-#define ckarşılaştır_sınır strncmp  // sınır_kadar_karşılaştır
+#define ckopyala_sÄ±nÄ±r strncpy      // sÄ±nÄ±r_kadar_kopyala
+#define cmetin_birleÅŸtir strcat           // dizi_birleÅŸtir
+#define cbirleÅŸtir_sÄ±nÄ±r strncat    // sÄ±nÄ±r_kadar_birleÅŸtir
+#define ckarÅŸÄ±laÅŸtÄ±r strcmp         // dizi_karÅŸÄ±laÅŸtÄ±r
+#define ckarÅŸÄ±laÅŸtÄ±r_sÄ±nÄ±r strncmp  // sÄ±nÄ±r_kadar_karÅŸÄ±laÅŸtÄ±r
 #define cbellek_ayarla memset       // bellek_doldur
 #define cbellek_kopyala memcpy      // bellek_kopyala
-#define cbellek_kaydır memmove      // bellek_kaydır
+#define cbellek_kaydÄ±r memmove      // bellek_kaydÄ±r
 #define ckarakter_ara strchr        // dizi_karakter_ara
 #define csondan_karakter_ara strrchr // sondan_karakter_ara
 #define calt_dizi_ara strstr        // dizi_icerisinde_dizi_ara
 #define cbellek_karakter_ara memchr // bellek_icerisinde_karakter_ara
-#define bellek_karşılaştır memcmp  // bellek_karşılaştır
+#define bellek_karÅŸÄ±laÅŸtÄ±r memcmp  // bellek_karÅŸÄ±laÅŸtÄ±r
 
-// --- <algorithm> Kütüphanesi Makroları ---
-#define döngü_for_each            for_each
+// --- <algorithm> KÃ¼tÃ¼phanesi MakrolarÄ± ---
+#define dÃ¶ngÃ¼_for_each            for_each
 #define bul                       find
 #define bul_if                    find_if
-#define bul_if_değil              find_if_not
+#define bul_if_deÄŸil              find_if_not
 #define say                       count
 #define say_if                    count_if
-#define eşleştir                  mismatch
-#define eşit_mi                   equal
-#define tümü_mi                   all_of
+#define eÅŸleÅŸtir                  mismatch
+#define eÅŸit_mi                   equal
+#define tÃ¼mÃ¼_mi                   all_of
 #define herhangi_biri_mi          any_of
-#define hiçbiri_mi                none_of
+#define hiÃ§biri_mi                none_of
 #define kopyala                   copy
 #define kopyala_n                 copy_n
 #define kopyala_if                copy_if
-#define taşı                      move
-#define ters_taşı                 move_backward
-#define değiş_tokuş               swap
-#define aralık_değiş_tokuş        swap_ranges
+#define taÅŸÄ±                      move
+#define ters_taÅŸÄ±                 move_backward
+#define deÄŸiÅŸ_tokuÅŸ               swap
+#define aralÄ±k_deÄŸiÅŸ_tokuÅŸ        swap_ranges
 #define doldur                    fill
 #define doldur_n                  fill_n
-#define dönüştür                  transform
-#define üret                      generate
-#define üret_n                    generate_n
+#define dÃ¶nÃ¼ÅŸtÃ¼r                  transform
+#define Ã¼ret                      generate
+#define Ã¼ret_n                    generate_n
 
-#define kaldır                    remove
-#define kaldır_if                 remove_if
-#define kaldır_kopyala            remove_copy
-#define kaldır_kopyala_if         remove_copy_if
-#define değiştir                  replace
-#define değiştir_if               replace_if
-#define değiştir_kopyala          replace_copy
-#define değiştir_kopyala_if       replace_copy_if
+#define kaldÄ±r                    remove
+#define kaldÄ±r_if                 remove_if
+#define kaldÄ±r_kopyala            remove_copy
+#define kaldÄ±r_kopyala_if         remove_copy_if
+#define deÄŸiÅŸtir                  replace
+#define deÄŸiÅŸtir_if               replace_if
+#define deÄŸiÅŸtir_kopyala          replace_copy
+#define deÄŸiÅŸtir_kopyala_if       replace_copy_if
 
-#define tersten_sırala            reverse
+#define tersten_sÄ±rala            reverse
 #define tersten_kopyala           reverse_copy
-#define döndür_rotate             rotate
-#define döndür_kopyala            rotate_copy
-#define rastgele_karıştır         shuffle
-#define ayıkla                    unique
-#define ayıkla_kopyala            unique_copy
-#define yerleştir                 partition
-#define yerleştir_kopyala         partition_copy
-#define yerleştir_durağan         stable_partition
+#define dÃ¶ndÃ¼r_rotate             rotate
+#define dÃ¶ndÃ¼r_kopyala            rotate_copy
+#define rastgele_karÄ±ÅŸtÄ±r         shuffle
+#define ayÄ±kla                    unique
+#define ayÄ±kla_kopyala            unique_copy
+#define yerleÅŸtir                 partition
+#define yerleÅŸtir_kopyala         partition_copy
+#define yerleÅŸtir_duraÄŸan         stable_partition
 
-#define sırala                    sort
-#define durağan_sırala            stable_sort
-#define kısmi_sırala              partial_sort
-#define kısmi_sırala_kopyala      partial_sort_copy
-#define sıralı_mı                 is_sorted
-#define nereye_kadar_sıralı       is_sorted_until
+#define sÄ±rala                    sort
+#define duraÄŸan_sÄ±rala            stable_sort
+#define kÄ±smi_sÄ±rala              partial_sort
+#define kÄ±smi_sÄ±rala_kopyala      partial_sort_copy
+#define sÄ±ralÄ±_mÄ±                 is_sorted
+#define nereye_kadar_sÄ±ralÄ±       is_sorted_until
 #define nci_eleman                nth_element
 
-#define alt_sınır                 lower_bound
-#define üst_sınır                 upper_bound
-#define eşleştir_aralığı          equal_range
+#define alt_sÄ±nÄ±r                 lower_bound
+#define Ã¼st_sÄ±nÄ±r                 upper_bound
+#define eÅŸleÅŸtir_aralÄ±ÄŸÄ±          equal_range
 #define ikili_arama               binary_search
-#define birleştir                 merge
-#define yerinde_birleştir         inplace_merge
-#define içerir_mi                 includes
-#define küme_birleşimi            set_union
-#define küme_kesişimi             set_intersection
-#define küme_farkı                set_difference
+#define birleÅŸtir                 merge
+#define yerinde_birleÅŸtir         inplace_merge
+#define iÃ§erir_mi                 includes
+#define kÃ¼me_birleÅŸimi            set_union
+#define kÃ¼me_kesiÅŸimi             set_intersection
+#define kÃ¼me_farkÄ±                set_difference
 #define simetrik_fark             set_symmetric_difference
 
-#define öncelik_yığını_yap        make_heap
-#define öncelik_yığınına_ekle     push_heap
-#define öncelik_yığınından_çıkar  pop_heap
-#define öncelik_yığınını_sırala   sort_heap
-#define öncelik_yığını_mı         is_heap
-#define öncelik_yığını_nereye_kadar  is_heap_until
+#define Ã¶ncelik_yÄ±ÄŸÄ±nÄ±_yap        make_heap
+#define Ã¶ncelik_yÄ±ÄŸÄ±nÄ±na_ekle     push_heap
+#define Ã¶ncelik_yÄ±ÄŸÄ±nÄ±ndan_Ã§Ä±kar  pop_heap
+#define Ã¶ncelik_yÄ±ÄŸÄ±nÄ±nÄ±_sÄ±rala   sort_heap
+#define Ã¶ncelik_yÄ±ÄŸÄ±nÄ±_mÄ±         is_heap
+#define Ã¶ncelik_yÄ±ÄŸÄ±nÄ±_nereye_kadar  is_heap_until
 
-#define yer_değiştir_iter         next_permutation
-#define önceki_perm               prev_permutation
+#define yer_deÄŸiÅŸtir_iter         next_permutation
+#define Ã¶nceki_perm               prev_permutation
 
 #define alt_dizi_subrange         search
-#define ardışık_arama             search_n
-#define döngü_find_end            find_end
-#define ilk_eşleşen               find_first_of
+#define ardÄ±ÅŸÄ±k_arama             search_n
+#define dÃ¶ngÃ¼_find_end            find_end
+#define ilk_eÅŸleÅŸen               find_first_of
 #define tekrar_bul                adjacent_find
 
-// --- <numeric> Kütüphanesi ---
+// --- <numeric> KÃ¼tÃ¼phanesi ---
 #define istatistik_accumulate     accumulate
-#define iç_çarpım                 inner_product
+#define iÃ§_Ã§arpÄ±m                 inner_product
 #define kademeli_toplam           partial_sum
-#define ardışık_fark              adjacent_difference
+#define ardÄ±ÅŸÄ±k_fark              adjacent_difference
 
-// --- <iterator> Kütüphanesi ---
+// --- <iterator> KÃ¼tÃ¼phanesi ---
 #define i_ileri_aktar               advance
 #define mesafe                    distance
 #define sonraki_iter              next
-#define önceki_iter               prev
-#define döngü_ilerleyici          back_inserter
-#define öne_ekleyici              front_inserter
-#define yerleştirici              inserter
+#define Ã¶nceki_iter               prev
+#define dÃ¶ngÃ¼_ilerleyici          back_inserter
+#define Ã¶ne_ekleyici              front_inserter
+#define yerleÅŸtirici              inserter
 
-// --- <memory> Kütüphanesi ---
+// --- <memory> KÃ¼tÃ¼phanesi ---
 #define benzersiz_ptr             std::unique_ptr
-#define paylaşılan_ptr            std::shared_ptr
-#define zayıf_ptr                 std::weak_ptr
+#define paylaÅŸÄ±lan_ptr            std::shared_ptr
+#define zayÄ±f_ptr                 std::weak_ptr
 #define yeni                    std::make_unique
-#define paylaşılan_yeni           std::make_shared
-#define benzersiz_gösterici          std::unique_ptr
-#define paylaşılan_gösterici         std::shared_ptr
-#define zayıf_gösterici              std::weak_ptr
-#define gösterici_oluştur            std::make_unique
-#define paylaşılan_gösterici_oluştur std::make_shared
+#define paylaÅŸÄ±lan_yeni           std::make_shared
+#define benzersiz_gÃ¶sterici          std::unique_ptr
+#define paylaÅŸÄ±lan_gÃ¶sterici         std::shared_ptr
+#define zayÄ±f_gÃ¶sterici              std::weak_ptr
+#define gÃ¶sterici_oluÅŸtur            std::make_unique
+#define paylaÅŸÄ±lan_gÃ¶sterici_oluÅŸtur std::make_shared
 
-// --- <thread> Kütüphanesi ---
-#define iş_parçacığı              std::thread
-#define kilit_gardiyanı              std::lock_guard
+// --- <thread> KÃ¼tÃ¼phanesi ---
+#define iÅŸ_parÃ§acÄ±ÄŸÄ±              std::thread
+#define kilit_gardiyanÄ±              std::lock_guard
 #define benzersiz_kilit           std::unique_lock
-#define koşul_değişkeni           std::condition_variable
+#define koÅŸul_deÄŸiÅŸkeni           std::condition_variable
 #define uyut                     std::this_thread::sleep_for
 #define getir_anahtar            std::this_thread::get_id
-#define başlat_parçacık           std::thread::join
-#define ayır_parçacık             std::thread::detach
+#define baÅŸlat_parÃ§acÄ±k           std::thread::join
+#define ayÄ±r_parÃ§acÄ±k             std::thread::detach
 
-// --- <cmath> Kütüphanesi ---
+// --- <cmath> KÃ¼tÃ¼phanesi ---
 
 #define karekok std::sqrt
 #define kupkok std::cbrt
@@ -425,8 +425,8 @@
 
 #define modlu_ayir std::modf
 
-#define sinüs std::sin
-#define kosinüs std::cos
+#define sinÃ¼s std::sin
+#define kosinÃ¼s std::cos
 #define tanjant std::tan
 #define arcsin std::asin
 #define arccos std::acos
@@ -462,38 +462,38 @@
 
 
 
-// --- <string> Kütüphanesi ---
+// --- <string> KÃ¼tÃ¼phanesi ---
 #define metin_uzunluk            std::string::size_type
 #define metin_boyutu             std::string::size_type
-#define metin_oluştur            std::string
+#define metin_oluÅŸtur            std::string
 #define metin_ekle               append
 #define metin_ara                find
 #define metin_ara_son            rfind
-#define metin_böl                substr
-#define metin_değiştir           replace
+#define metin_bÃ¶l                substr
+#define metin_deÄŸiÅŸtir           replace
 #define metin_karakter           at
 #define metin_c_str              c_str
-#define metin_boş_mu             empty
+#define metin_boÅŸ_mu             empty
 #define metin_temizle            clear
-#define metin_ekle_ön            insert
+#define metin_ekle_Ã¶n            insert
 #define metin_sil                erase
 #define metin_kopyala            copy
 
-// --- <vector> Kütüphanesi ---
-#define vektör_oluştur          std::vector
-#define vektör_boyutu           size
-#define vektör_bos_mu           empty
-#define vektör_ekle             push_back
-#define vektör_son_element       back
-#define vektör_ilk_element       front
-#define vektör_sil_son           pop_back
-#define vektör_temizle          clear
-#define vektör_erişim           at
-#define başlangıç begin
-#define bitiş end
+// --- <vector> KÃ¼tÃ¼phanesi ---
+#define vektÃ¶r_oluÅŸtur          std::vector
+#define vektÃ¶r_boyutu           size
+#define vektÃ¶r_bos_mu           empty
+#define vektÃ¶r_ekle             push_back
+#define vektÃ¶r_son_element       back
+#define vektÃ¶r_ilk_element       front
+#define vektÃ¶r_sil_son           pop_back
+#define vektÃ¶r_temizle          clear
+#define vektÃ¶r_eriÅŸim           at
+#define baÅŸlangÄ±Ã§ begin
+#define bitiÅŸ end
 
-// --- <map> Kütüphanesi ---
-#define harita_oluştur          std::map
+// --- <map> KÃ¼tÃ¼phanesi ---
+#define harita_oluÅŸtur          std::map
 #define harita_ekle             insert
 #define harita_bul              find
 #define harita_sil              erase
@@ -501,43 +501,43 @@
 #define harita_bos_mu           empty
 #define harita_temizle          clear
 
-// --- <set> Kütüphanesi ---
-#define küme_oluştur            std::set
-#define küme_ekle               insert
-#define küme_bul                find
-#define küme_sil                erase
-#define küme_boyutu             size
-#define küme_bos_mu             empty
-#define küme_temizle            clear
+// --- <set> KÃ¼tÃ¼phanesi ---
+#define kÃ¼me_oluÅŸtur            std::set
+#define kÃ¼me_ekle               insert
+#define kÃ¼me_bul                find
+#define kÃ¼me_sil                erase
+#define kÃ¼me_boyutu             size
+#define kÃ¼me_bos_mu             empty
+#define kÃ¼me_temizle            clear
 
-// --- <queue> Kütüphanesi ---
-#define kuyruk_oluştur          std::queue
+// --- <queue> KÃ¼tÃ¼phanesi ---
+#define kuyruk_oluÅŸtur          std::queue
 #define kuyruk_ekle             push
-#define kuyruk_çıkar            pop
-#define kuyruk_ön_element       front
+#define kuyruk_Ã§Ä±kar            pop
+#define kuyruk_Ã¶n_element       front
 #define kuyruk_son_element      back
 #define kuyruk_bos_mu           empty
 #define kuyruk_boyutu           size
 
-// --- <stack> Kütüphanesi ---
-#define yığın_oluştur           std::stack
-#define yığın_ekle              push
-#define yığın_çıkar             pop
-#define yığın_üst_element       top
-#define yığın_bos_mu            empty
-#define yığın_boyutu            size
+// --- <stack> KÃ¼tÃ¼phanesi ---
+#define yÄ±ÄŸÄ±n_oluÅŸtur           std::stack
+#define yÄ±ÄŸÄ±n_ekle              push
+#define yÄ±ÄŸÄ±n_Ã§Ä±kar             pop
+#define yÄ±ÄŸÄ±n_Ã¼st_element       top
+#define yÄ±ÄŸÄ±n_bos_mu            empty
+#define yÄ±ÄŸÄ±n_boyutu            size
 
-// --- <regex> Kütüphanesi ---
-#define düzenli_ifade_oluştur   std::regex
-#define eşleştir_düzenli_ifade std::regex_match
-#define arama_düzenli_ifade     std::regex_search
-#define değiştir_düzenli_ifade  std::regex_replace
+// --- <regex> KÃ¼tÃ¼phanesi ---
+#define dÃ¼zenli_ifade_oluÅŸtur   std::regex
+#define eÅŸleÅŸtir_dÃ¼zenli_ifade std::regex_match
+#define arama_dÃ¼zenli_ifade     std::regex_search
+#define deÄŸiÅŸtir_dÃ¼zenli_ifade  std::regex_replace
 
 
-// --- <chrono> Kütüphanesi ---
-#define zaman_süre              std::chrono::duration
-#define zaman_anı               std::chrono::time_point
-#define şu_an                  std::chrono::system_clock::now
+// --- <chrono> KÃ¼tÃ¼phanesi ---
+#define zaman_sÃ¼re              std::chrono::duration
+#define zaman_anÄ±               std::chrono::time_point
+#define ÅŸu_an                  std::chrono::system_clock::now
 #define uyku                    std::this_thread::sleep_for
 #define saniye               std::chrono::seconds
 #define milisaniye           std::chrono::milliseconds
@@ -545,113 +545,113 @@
 #define nanosaniye           std::chrono::nanoseconds
 #define zaman_saati          std::chrono::system_clock
 #define steady_saati         std::chrono::steady_clock
-#define yüksek_çözünürlük_saati std::chrono::high_resolution_clock
-// --- <random> Kütüphanesi ---
+#define yÃ¼ksek_Ã§Ã¶zÃ¼nÃ¼rlÃ¼k_saati std::chrono::high_resolution_clock
+// --- <random> KÃ¼tÃ¼phanesi ---
 #define rastgele_motor          std::mt19937
-#define rastgele_üretici        std::uniform_int_distribution
-#define rastgele_üretici_float  std::uniform_real_distribution
-#define rastgele_üretilen_sayı  operator()
+#define rastgele_Ã¼retici        std::uniform_int_distribution
+#define rastgele_Ã¼retici_float  std::uniform_real_distribution
+#define rastgele_Ã¼retilen_sayÄ±  operator()
 
-// --- <functional> Kütüphanesi ---
-#define fonksiyonel_oluştur     std::function
-#define bağla                   std::bind
-#define fonksiyon_kavramı       std::function
+// --- <functional> KÃ¼tÃ¼phanesi ---
+#define fonksiyonel_oluÅŸtur     std::function
+#define baÄŸla                   std::bind
+#define fonksiyon_kavramÄ±       std::function
 
-// --- <optional> Kütüphanesi ---
-#define isteğe_bağlı_oluştur    std::optional
-#define değer_var_mı            has_value
-#define değer_al                value
-#define değer_alveya            value_or
-#define isteğe_bağlı_boşalt     reset
-#define isteğe_bağlı_değer_var mı   has_value
-#define isteğe_bağlı_değer_al       value
-#define isteğe_bağlı_değer_al_veya  value_or
-#define isteğe_bağlı_sıfırla        reset
+// --- <optional> KÃ¼tÃ¼phanesi ---
+#define isteÄŸe_baÄŸlÄ±_oluÅŸtur    std::optional
+#define deÄŸer_var_mÄ±            has_value
+#define deÄŸer_al                value
+#define deÄŸer_alveya            value_or
+#define isteÄŸe_baÄŸlÄ±_boÅŸalt     reset
+#define isteÄŸe_baÄŸlÄ±_deÄŸer_var mÄ±   has_value
+#define isteÄŸe_baÄŸlÄ±_deÄŸer_al       value
+#define isteÄŸe_baÄŸlÄ±_deÄŸer_al_veya  value_or
+#define isteÄŸe_baÄŸlÄ±_sÄ±fÄ±rla        reset
 
-// --- <variant> Kütüphanesi ---
-#define değişken_oluştur        std::variant
-#define değer_al_özgü           std::get
-#define değer_al_türü           std::get_if
-#define ziyaretçi_çağır         std::visit
+// --- <variant> KÃ¼tÃ¼phanesi ---
+#define deÄŸiÅŸken_oluÅŸtur        std::variant
+#define deÄŸer_al_Ã¶zgÃ¼           std::get
+#define deÄŸer_al_tÃ¼rÃ¼           std::get_if
+#define ziyaretÃ§i_Ã§aÄŸÄ±r         std::visit
 
 
-// --- <mutex> Kütüphanesi ---
-#define kilit_oluştur           std::mutex
+// --- <mutex> KÃ¼tÃ¼phanesi ---
+#define kilit_oluÅŸtur           std::mutex
 #define kilitle                 lock
-#define kilit_kaldır            unlock
+#define kilit_kaldÄ±r            unlock
 
 
-// --- <filesystem> Kütüphanesi ---
+// --- <filesystem> KÃ¼tÃ¼phanesi ---
 #define dosya_yolu               std::filesystem::path
-#define dosya_var_mı             std::filesystem::exists
-#define dosya_oluştur           std::filesystem::create_directory
+#define dosya_var_mÄ±             std::filesystem::exists
+#define dosya_oluÅŸtur           std::filesystem::create_directory
 #define dosya_sil                std::filesystem::remove
-#define dosya_sil_herşey         std::filesystem::remove_all
-#define dosya_türü               std::filesystem::file_type
+#define dosya_sil_herÅŸey         std::filesystem::remove_all
+#define dosya_tÃ¼rÃ¼               std::filesystem::file_type
 #define dosya_boyutu             std::filesystem::file_size
 #define dosya_tarih              std::filesystem::last_write_time
 #define dizin_oku               std::filesystem::directory_iterator
 #define dizin_oku_rec           std::filesystem::recursive_directory_iterator
 
-// --- <exception> Kütüphanesi ---
-#define hata_oluştur             std::exception
-#define hata_mesajı_al           what
+// --- <exception> KÃ¼tÃ¼phanesi ---
+#define hata_oluÅŸtur             std::exception
+#define hata_mesajÄ±_al           what
 #define hata_at                  throw
 
-// --- <type_traits> Kütüphanesi ---
-#define tür_bilgisi_özelliği     std::is_same
-#define tür_türetimi             std::remove_const
-#define tür_sorgula             std::is_integral
-#define tür_dönüştür             std::decay
+// --- <type_traits> KÃ¼tÃ¼phanesi ---
+#define tÃ¼r_bilgisi_Ã¶zelliÄŸi     std::is_same
+#define tÃ¼r_tÃ¼retimi             std::remove_const
+#define tÃ¼r_sorgula             std::is_integral
+#define tÃ¼r_dÃ¶nÃ¼ÅŸtÃ¼r             std::decay
 
-// --- <utility> Kütüphanesi ---
-#define değişken_takas          std::swap
+// --- <utility> KÃ¼tÃ¼phanesi ---
+#define deÄŸiÅŸken_takas          std::swap
 #define hareket_ettir           std::move
 #define ileri_aktar             std::forward
-#define çift                    std::pair
-#define çift_olustur            std::make_pair
-#define bağla                   std::bind
-#define yardımcı_kapsam         std::scope_exit
+#define Ã§ift                    std::pair
+#define Ã§ift_olustur            std::make_pair
+#define baÄŸla                   std::bind
+#define yardÄ±mcÄ±_kapsam         std::scope_exit
 
 
-// --- <locale> Kütüphanesi ---
+// --- <locale> KÃ¼tÃ¼phanesi ---
 #define yerel_ayarla            std::locale
 #define yerel_ismi              std::locale::name
 #define yerel_ara              std::use_facet
 
-// --- <sstream> Kütüphanesi ---
-#define dizi_akış_oluştur       std::stringstream
-#define dizi_akış_oku           std::istringstream
-#define dizi_akış_yaz           std::ostringstream
+// --- <sstream> KÃ¼tÃ¼phanesi ---
+#define dizi_akÄ±ÅŸ_oluÅŸtur       std::stringstream
+#define dizi_akÄ±ÅŸ_oku           std::istringstream
+#define dizi_akÄ±ÅŸ_yaz           std::ostringstream
 
-// --- <iomanip> Kütüphanesi ---
-#define biçimlendirme_ayarla    std::setprecision
-#define biçimlendirme_doldur    std::setfill
-#define biçimlendirme_alan      std::setw
-#define biçimlendirme_sabit     std::fixed
+// --- <iomanip> KÃ¼tÃ¼phanesi ---
+#define biÃ§imlendirme_ayarla    std::setprecision
+#define biÃ§imlendirme_doldur    std::setfill
+#define biÃ§imlendirme_alan      std::setw
+#define biÃ§imlendirme_sabit     std::fixed
 
-// --- <future> Kütüphanesi ---
-#define gelecek_değer_oluştur   std::future
+// --- <future> KÃ¼tÃ¼phanesi ---
+#define gelecek_deÄŸer_oluÅŸtur   std::future
 #define gelecek_elde_et         get
 #define gelecek_bekle           wait
-#define sözleşme_elde_et        std::promise
+#define sÃ¶zleÅŸme_elde_et        std::promise
 
-// --- <any> Kütüphanesi ---
-#define her_türden              std::any
-#define her_türden_var_mı       has_value
-#define her_türden_elde_et      std::any_cast
+// --- <any> KÃ¼tÃ¼phanesi ---
+#define her_tÃ¼rden              std::any
+#define her_tÃ¼rden_var_mÄ±       has_value
+#define her_tÃ¼rden_elde_et      std::any_cast
 
-// --- <scoped_allocator> Kütüphanesi ---
-#define sınırlandırılmış_ayarlayıcı_oluştur std::scoped_allocator_adaptor
+// --- <scoped_allocator> KÃ¼tÃ¼phanesi ---
+#define sÄ±nÄ±rlandÄ±rÄ±lmÄ±ÅŸ_ayarlayÄ±cÄ±_oluÅŸtur std::scoped_allocator_adaptor
 
-// --- <stop_token> Kütüphanesi ---
-#define durdurma_jetonu_oluştur std::stop_token
+// --- <stop_token> KÃ¼tÃ¼phanesi ---
+#define durdurma_jetonu_oluÅŸtur std::stop_token
 #define jetonu_durdur  std::stop_source
 #define durdurma_jetonu_bekle   std::stop_callback
 
 
-// --- <list> Kütüphanesi ---
-#define liste_oluştur           std::list
+// --- <list> KÃ¼tÃ¼phanesi ---
+#define liste_oluÅŸtur           std::list
 #define liste_ekle_son          push_back
 #define liste_ekle_ilk          push_front
 #define liste_son_eleman        back
@@ -661,12 +661,12 @@
 #define liste_boyutu            size
 #define liste_bos_mu            empty
 #define liste_temizle           clear
-#define liste_erişim            at
+#define liste_eriÅŸim            at
 #define liste_sil               remove
 #define liste_bul               find
 
-// --- <forward_list> Kütüphanesi ---
-#define ileri_liste_oluştur     std::forward_list
+// --- <forward_list> KÃ¼tÃ¼phanesi ---
+#define ileri_liste_oluÅŸtur     std::forward_list
 #define ileri_liste_ekle_ilk    push_front
 #define ileri_liste_sil_ilk     pop_front
 #define ileri_liste_bos_mu      empty
@@ -674,144 +674,144 @@
 #define ileri_liste_ekle_son    insert_after
 #define ileri_liste_bul         find
 
-// --- <deque> Kütüphanesi ---
-#define çift_kuyruk_oluştur     std::deque
-#define çift_kuyruk_ekle_son    push_back
-#define çift_kuyruk_ekle_ilk    push_front
-#define çift_kuyruk_sil_son     pop_back
-#define çift_kuyruk_sil_ilk     pop_front
-#define çift_kuyruk_boyutu      size
-#define çift_kuyruk_bos_mu      empty
-#define çift_kuyruk_temizle     clear
-#define çift_kuyruk_erişim      at
+// --- <deque> KÃ¼tÃ¼phanesi ---
+#define Ã§ift_kuyruk_oluÅŸtur     std::deque
+#define Ã§ift_kuyruk_ekle_son    push_back
+#define Ã§ift_kuyruk_ekle_ilk    push_front
+#define Ã§ift_kuyruk_sil_son     pop_back
+#define Ã§ift_kuyruk_sil_ilk     pop_front
+#define Ã§ift_kuyruk_boyutu      size
+#define Ã§ift_kuyruk_bos_mu      empty
+#define Ã§ift_kuyruk_temizle     clear
+#define Ã§ift_kuyruk_eriÅŸim      at
 
 
-// --- <unordered_map> Kütüphanesi ---
-#define düzensiz_harita_oluştur  std::unordered_map
-#define düzensiz_harita_ekle     insert
-#define düzensiz_harita_sil      erase
-#define düzensiz_harita_bul      find
-#define düzensiz_harita_boyutu   size
-#define düzensiz_harita_bos_mu   empty
-#define düzensiz_harita_temizle  clear
+// --- <unordered_map> KÃ¼tÃ¼phanesi ---
+#define dÃ¼zensiz_harita_oluÅŸtur  std::unordered_map
+#define dÃ¼zensiz_harita_ekle     insert
+#define dÃ¼zensiz_harita_sil      erase
+#define dÃ¼zensiz_harita_bul      find
+#define dÃ¼zensiz_harita_boyutu   size
+#define dÃ¼zensiz_harita_bos_mu   empty
+#define dÃ¼zensiz_harita_temizle  clear
 
 
-// --- <unordered_set> Kütüphanesi ---
-#define düzensiz_küme_oluştur    std::unordered_set
-#define düzensiz_küme_ekle       insert
-#define düzensiz_küme_sil        erase
-#define düzensiz_küme_bul        find
-#define düzensiz_küme_boyutu     size
-#define düzensiz_küme_bos_mu     empty
-#define düzensiz_küme_temizle    clear
+// --- <unordered_set> KÃ¼tÃ¼phanesi ---
+#define dÃ¼zensiz_kÃ¼me_oluÅŸtur    std::unordered_set
+#define dÃ¼zensiz_kÃ¼me_ekle       insert
+#define dÃ¼zensiz_kÃ¼me_sil        erase
+#define dÃ¼zensiz_kÃ¼me_bul        find
+#define dÃ¼zensiz_kÃ¼me_boyutu     size
+#define dÃ¼zensiz_kÃ¼me_bos_mu     empty
+#define dÃ¼zensiz_kÃ¼me_temizle    clear
 
-// --- <fstream> Kütüphanesi ---
-#define dosya_akışı_oluştur        std::fstream
-#define dosya_girdi_akışı_oluştur  std::ifstream
-#define dosya_çıktı_akışı_oluştur  std::ofstream
-#define dosya_aç                   open
+// --- <fstream> KÃ¼tÃ¼phanesi ---
+#define dosya_akÄ±ÅŸÄ±_oluÅŸtur        std::fstream
+#define dosya_girdi_akÄ±ÅŸÄ±_oluÅŸtur  std::ifstream
+#define dosya_Ã§Ä±ktÄ±_akÄ±ÅŸÄ±_oluÅŸtur  std::ofstream
+#define dosya_aÃ§                   open
 #define dosya_kapat                close
 #define dosya_oku                  read
 #define dosya_yaz                  write
-#define dosya_başlangıç            seekg
-#define dosya_bitiş                seekp
-#define dosya_şimdiki              tellg
-#define dosya_şimdiki_yaz          tellp
-#define dosya_başarılı             good
-#define dosya_başarısız            fail
+#define dosya_baÅŸlangÄ±Ã§            seekg
+#define dosya_bitiÅŸ                seekp
+#define dosya_ÅŸimdiki              tellg
+#define dosya_ÅŸimdiki_yaz          tellp
+#define dosya_baÅŸarÄ±lÄ±             good
+#define dosya_baÅŸarÄ±sÄ±z            fail
 #define dosya_durum_sonu           eof
 
-// --- <sstream> Kütüphanesi ---
-#define dizi_akışı_oluştur          std::stringstream
-#define dizi_akışı_girdi_oluştur    std::istringstream
-#define dizi_akışı_çıktı_oluştur    std::ostringstream
-#define dizi_akışı_al               str
-#define dizi_akışı_ayarla           str
+// --- <sstream> KÃ¼tÃ¼phanesi ---
+#define dizi_akÄ±ÅŸÄ±_oluÅŸtur          std::stringstream
+#define dizi_akÄ±ÅŸÄ±_girdi_oluÅŸtur    std::istringstream
+#define dizi_akÄ±ÅŸÄ±_Ã§Ä±ktÄ±_oluÅŸtur    std::ostringstream
+#define dizi_akÄ±ÅŸÄ±_al               str
+#define dizi_akÄ±ÅŸÄ±_ayarla           str
 
-// --- <iomanip> Kütüphanesi ---
-#define biçimlendirme_alan_ayarla   std::setw
-#define biçimlendirme_doldur        std::setfill
-#define biçimlendirme_hassasiyet    std::setprecision
-#define biçimlendirme_sabit         std::fixed
-#define biçimlendirme_bilimsel      std::scientific
-
-
-// --- <valarray> Kütüphanesi ---
-#define değer_dizisi_oluştur        std::valarray
-#define değer_dizisi_toplamı        sum
-#define değer_dizisi_ortalaması     mean
-#define değer_dizisi_ayrık          slice
-#define değer_dizisi_boyutu         size
+// --- <iomanip> KÃ¼tÃ¼phanesi ---
+#define biÃ§imlendirme_alan_ayarla   std::setw
+#define biÃ§imlendirme_doldur        std::setfill
+#define biÃ§imlendirme_hassasiyet    std::setprecision
+#define biÃ§imlendirme_sabit         std::fixed
+#define biÃ§imlendirme_bilimsel      std::scientific
 
 
-// --- <functional> Kütüphanesi ---
-#define işlev_oluştur             std::function
-#define bağla                     std::bind
-#define bağla_önceden             std::placeholders::_1
-#define bağla_ikinci              std::placeholders::_2
-#define bağla_üçüncü              std::placeholders::_3
-
-// --- <type_traits> Kütüphanesi ---
-#define tür_bilgisi_oluştur       std::is_same
-#define tür_bilgisi_türet         std::remove_const
-#define tür_bilgisi_dönüştür      std::conditional
-#define tür_bilgisi_karşılaştır   std::is_base_of
-#define tür_bilgisi_sinirli       std::enable_if
+// --- <valarray> KÃ¼tÃ¼phanesi ---
+#define deÄŸer_dizisi_oluÅŸtur        std::valarray
+#define deÄŸer_dizisi_toplamÄ±        sum
+#define deÄŸer_dizisi_ortalamasÄ±     mean
+#define deÄŸer_dizisi_ayrÄ±k          slice
+#define deÄŸer_dizisi_boyutu         size
 
 
-// --- <optional> Kütüphanesi ---
-#define isteğe_bağlı_oluştur        std::optional
-#define isteğe_bağlı_var_mı         has_value
-#define isteğe_bağlı_değer_al       value
-#define isteğe_bağlı_değer_veya     value_or
+// --- <functional> KÃ¼tÃ¼phanesi ---
+#define iÅŸlev_oluÅŸtur             std::function
+#define baÄŸla                     std::bind
+#define baÄŸla_Ã¶nceden             std::placeholders::_1
+#define baÄŸla_ikinci              std::placeholders::_2
+#define baÄŸla_Ã¼Ã§Ã¼ncÃ¼              std::placeholders::_3
 
-// --- <scoped_allocator> Kütüphanesi ---
-#define sınırlandırılmış_ayarlayıcı_oluştur std::scoped_allocator_adaptor
+// --- <type_traits> KÃ¼tÃ¼phanesi ---
+#define tÃ¼r_bilgisi_oluÅŸtur       std::is_same
+#define tÃ¼r_bilgisi_tÃ¼ret         std::remove_const
+#define tÃ¼r_bilgisi_dÃ¶nÃ¼ÅŸtÃ¼r      std::conditional
+#define tÃ¼r_bilgisi_karÅŸÄ±laÅŸtÄ±r   std::is_base_of
+#define tÃ¼r_bilgisi_sinirli       std::enable_if
 
-// --- <span> Kütüphanesi ---
-#define aralık_oluştur              std::span
-#define aralık_boyutu              size
-#define aralık_erişim              operator[]
 
-// --- <system_error> Kütüphanesi ---
-#define sistem_hatası_oluştur       std::error_code
-#define sistem_hatası_mesajı_al     message
-#define sistem_hatası_kod_al        value
-#define sistem_hatası_tanımla       make_error_code
+// --- <optional> KÃ¼tÃ¼phanesi ---
+#define isteÄŸe_baÄŸlÄ±_oluÅŸtur        std::optional
+#define isteÄŸe_baÄŸlÄ±_var_mÄ±         has_value
+#define isteÄŸe_baÄŸlÄ±_deÄŸer_al       value
+#define isteÄŸe_baÄŸlÄ±_deÄŸer_veya     value_or
 
-// --- <stop_token> Kütüphanesi ---
-#define durdurma_jetonu_oluştur    std::stop_token
-#define durdurma_jetonu_isteği     request_stop
+// --- <scoped_allocator> KÃ¼tÃ¼phanesi ---
+#define sÄ±nÄ±rlandÄ±rÄ±lmÄ±ÅŸ_ayarlayÄ±cÄ±_oluÅŸtur std::scoped_allocator_adaptor
+
+// --- <span> KÃ¼tÃ¼phanesi ---
+#define aralÄ±k_oluÅŸtur              std::span
+#define aralÄ±k_boyutu              size
+#define aralÄ±k_eriÅŸim              operator[]
+
+// --- <system_error> KÃ¼tÃ¼phanesi ---
+#define sistem_hatasÄ±_oluÅŸtur       std::error_code
+#define sistem_hatasÄ±_mesajÄ±_al     message
+#define sistem_hatasÄ±_kod_al        value
+#define sistem_hatasÄ±_tanÄ±mla       make_error_code
+
+// --- <stop_token> KÃ¼tÃ¼phanesi ---
+#define durdurma_jetonu_oluÅŸtur    std::stop_token
+#define durdurma_jetonu_isteÄŸi     request_stop
 #define durdurma_jetonu_kontrol    stop_requested
 
-// --- <chrono> Kütüphanesi ---
-#define zaman_süre_oluştur           std::chrono::duration
-#define zaman_süre_toplam            count
-#define zaman_süre_ekle             operator+
-#define zaman_süre_farkı            operator-
-#define zaman_saat_oluştur          std::chrono::hours
-#define zaman_dakika_oluştur        std::chrono::minutes
-#define zaman_saniye_oluştur        std::chrono::seconds
-#define zaman_milisaniye_oluştur    std::chrono::milliseconds
-#define zaman_mikrosaniye_oluştur   std::chrono::microseconds
-#define zaman_nanosaniye_oluştur    std::chrono::nanoseconds
-#define zaman_süre_sonu             std::chrono::steady_clock::time_point
-#define zaman_şimdi_al              std::chrono::steady_clock::now
+// --- <chrono> KÃ¼tÃ¼phanesi ---
+#define zaman_sÃ¼re_oluÅŸtur           std::chrono::duration
+#define zaman_sÃ¼re_toplam            count
+#define zaman_sÃ¼re_ekle             operator+
+#define zaman_sÃ¼re_farkÄ±            operator-
+#define zaman_saat_oluÅŸtur          std::chrono::hours
+#define zaman_dakika_oluÅŸtur        std::chrono::minutes
+#define zaman_saniye_oluÅŸtur        std::chrono::seconds
+#define zaman_milisaniye_oluÅŸtur    std::chrono::milliseconds
+#define zaman_mikrosaniye_oluÅŸtur   std::chrono::microseconds
+#define zaman_nanosaniye_oluÅŸtur    std::chrono::nanoseconds
+#define zaman_sÃ¼re_sonu             std::chrono::steady_clock::time_point
+#define zaman_ÅŸimdi_al              std::chrono::steady_clock::now
 
-// --- <complex> Kütüphanesi ---
-#define karmaşık_sayı_oluştur        std::complex
-#define karmaşık_reel_al            real
-#define karmaşık_imajiner_al        imag
-#define karmaşık_mutlak_değer       std::abs
-#define karmaşık_gerçekleştir       std::real
-#define karmaşık_imalet             std::imag
-#define karmaşık_polar_oluştur      std::polar
-#define karmaşık_konjugat           std::conj
-#define karmaşık_argüman            std::arg
-#define karmaşık_faz                std::arg
-#define karmaşık_norm               std::norm
+// --- <complex> KÃ¼tÃ¼phanesi ---
+#define karmaÅŸÄ±k_sayÄ±_oluÅŸtur        std::complex
+#define karmaÅŸÄ±k_reel_al            real
+#define karmaÅŸÄ±k_imajiner_al        imag
+#define karmaÅŸÄ±k_mutlak_deÄŸer       std::abs
+#define karmaÅŸÄ±k_gerÃ§ekleÅŸtir       std::real
+#define karmaÅŸÄ±k_imalet             std::imag
+#define karmaÅŸÄ±k_polar_oluÅŸtur      std::polar
+#define karmaÅŸÄ±k_konjugat           std::conj
+#define karmaÅŸÄ±k_argÃ¼man            std::arg
+#define karmaÅŸÄ±k_faz                std::arg
+#define karmaÅŸÄ±k_norm               std::norm
 
-// --- <bit> Kütüphanesi ---
+// --- <bit> KÃ¼tÃ¼phanesi ---
 #define bit_set                    std::bitset
 #define bit_test                   test
 #define bit_set_bit                set
@@ -820,86 +820,86 @@
 #define bit_count                  count
 #define bit_to_string              to_string
 
-// --- <concepts> Kütüphanesi ---
-#define kavram_tanımla             std::concept
+// --- <concepts> KÃ¼tÃ¼phanesi ---
+#define kavram_tanÄ±mla             std::concept
 #define kavram_kontrol             requires
 #define kavram_kapsam              concept
 
-// --- <coroutine> Kütüphanesi ---
-#define asenkron_oluştur            std::coroutine_handle
+// --- <coroutine> KÃ¼tÃ¼phanesi ---
+#define asenkron_oluÅŸtur            std::coroutine_handle
 #define asenkron_durdur             suspend
 #define asenkron_devam_et           resume
-#define asenkron_başlat             start
+#define asenkron_baÅŸlat             start
 
-// --- <filesystem> Kütüphanesi (Detaylı) ---
+// --- <filesystem> KÃ¼tÃ¼phanesi (DetaylÄ±) ---
 #define dosya_sistemi_yolu             std::filesystem::path
-#define dosya_sistemi_var_mı           exists
-#define dosya_sistemi_dizin_oluştur    create_directory
+#define dosya_sistemi_var_mÄ±           exists
+#define dosya_sistemi_dizin_oluÅŸtur    create_directory
 #define dosya_sistemi_dizin_sil        remove
-#define dosya_sistemi_dosya_özellikleri status
+#define dosya_sistemi_dosya_Ã¶zellikleri status
 #define dosya_sistemi_dosya_boyutu     file_size
 #define dosya_sistemi_dosya_tarihi     last_write_time
 #define dosya_sistemi_dizin_tarih      last_write_time
 #define dosya_sistemi_dizin_oku        is_directory
 #define dosya_sistemi_dosya_oku        is_regular_file
 
-// --- <locale> Kütüphanesi ---
+// --- <locale> KÃ¼tÃ¼phanesi ---
 #define yerel_ayarla                std::locale
 #define yerel_getir                std::use_facet
-#define yerel_set_çeviri           std::codecvt
+#define yerel_set_Ã§eviri           std::codecvt
 
-// --- <mutex> Kütüphanesi ---
-#define kilit_oluştur              std::mutex
-#define kilit_gardiyanı                 std::lock_guard
+// --- <mutex> KÃ¼tÃ¼phanesi ---
+#define kilit_oluÅŸtur              std::mutex
+#define kilit_gardiyanÄ±                 std::lock_guard
 #define benzersiz_kilit_koru       std::unique_lock
-#define paylaşım_kilidi            std::shared_mutex
+#define paylaÅŸÄ±m_kilidi            std::shared_mutex
 #define kilit_kilitlenme_kontrol   try_lock
-#define kilit_bırak               unlock
+#define kilit_bÄ±rak               unlock
 
-// --- <condition_variable> Kütüphanesi ---
-#define koşul_değişkeni_oluştur   std::condition_variable
-#define koşul_bekle               wait
-#define koşul_bekle_kontrol       wait_for
-#define koşul_bildiri             notify_one
-#define koşul_bildir              notify_all
+// --- <condition_variable> KÃ¼tÃ¼phanesi ---
+#define koÅŸul_deÄŸiÅŸkeni_oluÅŸtur   std::condition_variable
+#define koÅŸul_bekle               wait
+#define koÅŸul_bekle_kontrol       wait_for
+#define koÅŸul_bildiri             notify_one
+#define koÅŸul_bildir              notify_all
 
-// --- <exception> Kütüphanesi ---
-#define istisna_oluştur            std::exception
+// --- <exception> KÃ¼tÃ¼phanesi ---
+#define istisna_oluÅŸtur            std::exception
 #define istisna_veya               std::runtime_error
 #define istisna_tut               std::exception_ptr
-#define fırlat_istisna            throw
+#define fÄ±rlat_istisna            throw
 #define yakala_istisna            catch
 #define dene_blok                try
 
-// --- <typeindex> Kütüphanesi ---
-#define tür_indeksi_oluştur        std::type_index
-#define tür_indeksi_karşılaştırma  operator==
+// --- <typeindex> KÃ¼tÃ¼phanesi ---
+#define tÃ¼r_indeksi_oluÅŸtur        std::type_index
+#define tÃ¼r_indeksi_karÅŸÄ±laÅŸtÄ±rma  operator==
 
-// --- <typeinfo> Kütüphanesi ---
-#define tür_bilgisi_al             typeid
-#define tür_bilgisi_ismi           name
+// --- <typeinfo> KÃ¼tÃ¼phanesi ---
+#define tÃ¼r_bilgisi_al             typeid
+#define tÃ¼r_bilgisi_ismi           name
 
 
-// --- Konsol Yerelleştirmesi ---
+// --- Konsol YerelleÅŸtirmesi ---
 
 #ifdef _WIN32
 #include <windows.h>
 #endif
 
 void ortami_yerellestir() {
-	// C ve C++ yerel ayarlarını varsayılan sisteme ayarla
+	// C ve C++ yerel ayarlarÄ±nÄ± varsayÄ±lan sisteme ayarla
 	std::setlocale(LC_ALL, "");
 	std::locale::global(std::locale(""));
 
-	// Giriş/Çıkış senkronizasyonunu kapat (performans için)
+	// GiriÅŸ/Ã‡Ä±kÄ±ÅŸ senkronizasyonunu kapat (performans iÃ§in)
 	std::ios_base::sync_with_stdio(false);
 
 #ifdef _WIN32
-	// Windows konsolunda UTF-8 çıktı ve girişi etkinleştir
+	// Windows konsolunda UTF-8 Ã§Ä±ktÄ± ve giriÅŸi etkinleÅŸtir
 	SetConsoleOutputCP(CP_UTF8);
 	SetConsoleCP(CP_UTF8);
 
-	// Konsolda ANSI kodlarını (VT100) destekle
+	// Konsolda ANSI kodlarÄ±nÄ± (VT100) destekle
 	HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
 	if (hOut != INVALID_HANDLE_VALUE) {
 		DWORD dwMode = 0;
@@ -912,84 +912,84 @@ void ortami_yerellestir() {
 
 }
 
-// --- Demo İçin Fonksiyonlar ---
-void demo_asal_sayılar() {
-	tamsayı sayı = 2;
+// --- Demo Ä°Ã§in Fonksiyonlar ---
+void demo_asal_sayÄ±lar() {
+	tamsayÄ± sayÄ± = 2;
 
-	döngü(; sayı <= 50; sayı++) {
-		tamsayı bölen = 2;
-		mantıksal asal_mı = doğru;
-		iken(bölen < sayı) {
-			eğer(sayı % bölen == 0) {
-				asal_mı = yanlış;
-				çık;
+	dÃ¶ngÃ¼(; sayÄ± <= 50; sayÄ±++) {
+		tamsayÄ± bÃ¶len = 2;
+		mantÄ±ksal asal_mÄ± = doÄŸru;
+		iken(bÃ¶len < sayÄ±) {
+			eÄŸer(sayÄ± % bÃ¶len == 0) {
+				asal_mÄ± = yanlÄ±ÅŸ;
+				Ã§Ä±k;
 			}
-			bölen++;
+			bÃ¶len++;
 		}
-		eğer(asal_mı)
-			yaz sayı << " ";
+		eÄŸer(asal_mÄ±)
+			yaz sayÄ± << " ";
 	}
-	boş_bırak
-		std::cout << "\nDevam etmek için bir tuşa basın...";
+	boÅŸ_bÄ±rak
+		std::cout << "\nDevam etmek iÃ§in bir tuÅŸa basÄ±n...";
 	std::cin.get();
 }
-int demo_faktöriyel(int n) {
-	eğer(n == 0) n = 1;
-	dönüş n* demo_faktöriyel(n - 1);
-	std::cout << "\nDevam etmek için bir tuşa basın...";
+int demo_faktÃ¶riyel(int n) {
+	eÄŸer(n == 0) n = 1;
+	dÃ¶nÃ¼ÅŸ n* demo_faktÃ¶riyel(n - 1);
+	std::cout << "\nDevam etmek iÃ§in bir tuÅŸa basÄ±n...";
 	std::cin.get();
 	return n;
 }
-void demo_yas_kontrol(int yaş) {
-	eğer(yaş < 18)
-		yaz "18 yaşından küçük\n";
-	değilse_eğer(yaş == 18)
-		yaz "Tam 18 yaşında\n";
-	değilse
-		yaz "18 yaşından büyük\n";
-	std::cout << "\nDevam etmek için bir tuşa basın...";
+void demo_yas_kontrol(int yaÅŸ) {
+	eÄŸer(yaÅŸ < 18)
+		yaz "18 yaÅŸÄ±ndan kÃ¼Ã§Ã¼k\n";
+	deÄŸilse_eÄŸer(yaÅŸ == 18)
+		yaz "Tam 18 yaÅŸÄ±nda\n";
+	deÄŸilse
+		yaz "18 yaÅŸÄ±ndan bÃ¼yÃ¼k\n";
+	std::cout << "\nDevam etmek iÃ§in bir tuÅŸa basÄ±n...";
 	std::cin.get();
 }
-void demo_döngüler() {
-	yaz "1'den 5'e kadar for döngüsü:\n";
-	döngü(tamsayı i = 1; i <= 5; i++)
+void demo_dÃ¶ngÃ¼ler() {
+	yaz "1'den 5'e kadar for dÃ¶ngÃ¼sÃ¼:\n";
+	dÃ¶ngÃ¼(tamsayÄ± i = 1; i <= 5; i++)
 		yaz i << " ";
-	boş_bırak
+	boÅŸ_bÄ±rak
 
-		yaz "1'den 5'e kadar while döngüsü:\n";
-	tamsayı j = 1;
+		yaz "1'den 5'e kadar while dÃ¶ngÃ¼sÃ¼:\n";
+	tamsayÄ± j = 1;
 	iken(j <= 5) {
 		yaz j << " ";
 		j++;
 	}
-	boş_bırak
-		std::cout << "\nDevam etmek için bir tuşa basın...";
+	boÅŸ_bÄ±rak
+		std::cout << "\nDevam etmek iÃ§in bir tuÅŸa basÄ±n...";
 	std::cin.get();
 }
-void demo_vektör() {
-	vektör_oluştur<tamsayı> sayılar = { 1, 2, 3, 4, 5 };
-	yaz "Vektör elemanları:\n";
-	döngü_for_each(sayılar.başlangıç(), sayılar.bitiş(), [](tamsayı x) {
+void demo_vektÃ¶r() {
+	vektÃ¶r_oluÅŸtur<tamsayÄ±> sayÄ±lar = { 1, 2, 3, 4, 5 };
+	yaz "VektÃ¶r elemanlarÄ±:\n";
+	dÃ¶ngÃ¼_for_each(sayÄ±lar.baÅŸlangÄ±Ã§(), sayÄ±lar.bitiÅŸ(), [](tamsayÄ± x) {
 		yaz x << " ";
 		});
-	boş_bırak
-		std::cout << "\nDevam etmek için bir tuşa basın...";
+	boÅŸ_bÄ±rak
+		std::cout << "\nDevam etmek iÃ§in bir tuÅŸa basÄ±n...";
 	std::cin.get();
 }
-void demo_pisagor(tamsayı a, tamsayı b, tamsayı c) {
+void demo_pisagor(tamsayÄ± a, tamsayÄ± b, tamsayÄ± c) {
 	yaz "1. Kenar" << a << "\n" <<
 		"2. Kenar" << b << "\n" <<
 		"3. Kenar" << c << "\n";
-	eğer(a * a + b * b == c * c)
-		yaz "Pisagor üçgeni\n";
-	değilse
-		yaz "Pisagor üçgeni değil\n";
-	std::cout << "\nDevam etmek için bir tuşa basın...";
+	eÄŸer(a * a + b * b == c * c)
+		yaz "Pisagor Ã¼Ã§geni\n";
+	deÄŸilse
+		yaz "Pisagor Ã¼Ã§geni deÄŸil\n";
+	std::cout << "\nDevam etmek iÃ§in bir tuÅŸa basÄ±n...";
 	std::cin.get();
 }
 
-// Yukarıdaki fonksiyonlar C++ Türkçe Yaması ile yazıldı.
-// Her biri temel kavramları Türkçe karşılıklarla gösterir.
+// YukarÄ±daki fonksiyonlar C++ TÃ¼rkÃ§e YamasÄ± ile yazÄ±ldÄ±.
+// Her biri temel kavramlarÄ± TÃ¼rkÃ§e karÅŸÄ±lÄ±klarla gÃ¶sterir.
 
 
-// Geliştirmek istediğiniz Türkçeleştirme varsa değiştirebilirsiniz fakat eskiden ne olduğunu yazarsanız kıyaslaması daha kolay olur.
+// GeliÅŸtirmek istediÄŸiniz TÃ¼rkÃ§eleÅŸtirme varsa deÄŸiÅŸtirebilirsiniz fakat eskiden ne olduÄŸunu yazarsanÄ±z kÄ±yaslamasÄ± daha kolay olur.
