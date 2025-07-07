@@ -9,7 +9,7 @@ Bu kütüphane ile Türkçebilenler normal C++ diline kıyasla daha kısa süred
 - C++
   <code>
   #include \<iostream\>
-  #include <p><cmath></p>
+  #include \<cmath\>
   int main(){
   int i = 4; // Tanımlamaya aslında gerek yoktu fakat kod farkı belli olsun diye tanımladım.
   std::cout<<sqrt(i)<<"\n";
