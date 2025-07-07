@@ -405,7 +405,7 @@
 
 #define ondalık_mod std::fmod
 #define kalan std::remainder
-#define kalan_ve_bölum std::remquo
+#define kalan_ve_bölüm std::remquo
 
 #define e_üzeri std::exp
 #define iki_üzeri std::exp2
@@ -440,17 +440,17 @@
 #define arccos_hiperbolik std::acosh
 #define arctan_hiperbolik std::atanh
 
-#define isaret_kopyala std::copysign
-#define sonraki_deger std::nextafter
+#define işaret_kopyala std::copysign
+#define sonraki_değer std::nextafter
 #define sonraki_tam std::nexttoward
 
 #define pozitif_fark std::fdim
 #define maksimum std::fmax
 #define minimum std::fmin
 
-#define ayir_mantissa std::frexp
-#define carp_2_uzeri std::ldexp
-#define carp_optimum std::scalbn
+#define ayır_mantissa std::frexp
+#define çarp_2_üzeri std::ldexp
+#define çarp_optimum std::scalbn
 
 #define sonlu_mu std::isfinite
 #define sonsuz_mu std::isinf
