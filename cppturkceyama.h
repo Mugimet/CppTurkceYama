@@ -934,13 +934,28 @@ void demo_asal_sayılar() {
 	std::cin.get();
 }
 int demo_faktöriyel(int n) {
-	eğer(n == 0) n = 1;
-	dönüş n* demo_faktöriyel(n - 1);
-	std::cout << "\nDevam etmek için bir tuşa basın...";
-	std::cin.get();
-	return n;
+    static bool bekletildi = false; // sadece bir kere bekle
+
+    if (n <= 1) {
+        if (!bekletildi) {
+            std::cout << "\nDevam etmek için bir tuşa basın...";
+            std::cin.get();
+            bekletildi = true;
+        }
+        return 1;
+    }
+
+    int sonuc = n * demo_faktöriyel(n - 1);
+
+    if (!bekletildi) {
+        std::cout << "\nDevam etmek için bir tuşa basın...";
+        std::cin.get();
+        bekletildi = true;
+    }
+
+    return sonuc;
 }
-void demo_yas_kontrol(int yaş) {
+void demo_yaş_kontrol(int yaş) {
 	eğer(yaş < 18)
 		yaz "18 yaşından küçük\n";
 	değilse_eğer(yaş == 18)
@@ -950,21 +965,26 @@ void demo_yas_kontrol(int yaş) {
 	std::cout << "\nDevam etmek için bir tuşa basın...";
 	std::cin.get();
 }
-void demo_döngüler() {
-	yaz "1'den 5'e kadar for döngüsü:\n";
-	döngü(tamsayı i = 1; i <= 5; i++)
-		yaz i << " ";
-	boş_bırak
+void demo_performans_testi() {
+    using namespace std::chrono;
 
-		yaz "1'den 5'e kadar while döngüsü:\n";
-	tamsayı j = 1;
-	iken(j <= 5) {
-		yaz j << " ";
-		j++;
-	}
-	boş_bırak
-		std::cout << "\nDevam etmek için bir tuşa basın...";
-	std::cin.get();
+    yaz "1'den 10000000'e kadar for döngüsü başlıyor...\n";
+
+    auto baslangic = high_resolution_clock::now();
+
+    tamsayı toplam = 0;
+    döngü(tamsayı i = 1; i <= 10000000; i++) {
+        toplam += i;  // İşlem yapıyoruz, ama çıktı yok
+    }
+
+    auto bitis = high_resolution_clock::now();
+    duration<double> sure = bitis - baslangic;
+
+    yaz "Toplam: " << toplam << "\n";
+    yaz "Süre: " << sure.count() << " saniye\n";
+
+    std::cout << "\nDevam etmek için bir tuşa basın...";
+    std::cin.get();
 }
 void demo_vektör() {
 	vektör_oluştur<tamsayı> sayılar = { 1, 2, 3, 4, 5 };
