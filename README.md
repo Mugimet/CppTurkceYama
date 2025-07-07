@@ -7,6 +7,7 @@ Bu kütüphane daha çok eğitim amaçlı ve küçük veya orta çaplı projeler
 Bu kütüphane ile Türkçebilenler normal C++ diline kıyasla daha kısa sürede ve daha kısa kod yazarlar fakat bazı durumlara göre değişebilir. Mesela int yerine tamsayı yazmamız kodu uzatabilir veya string yerine metin yazmamız kodu kısaltabilir. Olabildiğince kısa yazmak istiyorsanız ve bu cppturkceyama.h içinde kısa olanı yoksa C++ dilinin anahtar kelimelerini kullanabilirsiniz.
 # Örnek Kod
 - C++
+  <code>
   #include <iostream>
   #include <cmath>
   int main(){
@@ -14,12 +15,15 @@ Bu kütüphane ile Türkçebilenler normal C++ diline kıyasla daha kısa süred
   std::cout<<sqrt(i)<<"\n";
   return 0;
   }
+  </code>
 - cppturkceyama.h Kütüphanesi
+  <code>
   #include "cppturkceyama.h"
   ana{
   tamsayı i = 4; // tamsayı yerinde int de yazılabilir.
   yaz karekök(i)<<"\n";
   dönüş 0;
   }
+  </code>
 # Sonuç
 - Sonuç olarak cppturkceyama.h kütüphanesi kodları hem kısaltır hem kütüphane ekleme işini kaldırır hem de Türkçe bilenler için kodu daha da okunaklı hâle getirir.
