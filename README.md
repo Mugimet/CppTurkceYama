@@ -8,8 +8,8 @@ Bu kütüphane ile Türkçebilenler normal C++ diline kıyasla daha kısa süred
 # Örnek Kod
 - C++
   <code>
-  #include <iostream>
-  #include <cmath>
+  #include <p><iostream></p>
+  #include <p><cmath></p>
   int main(){
   int i = 4; // Tanımlamaya aslında gerek yoktu fakat kod farkı belli olsun diye tanımladım.
   std::cout<<sqrt(i)<<"\n";
