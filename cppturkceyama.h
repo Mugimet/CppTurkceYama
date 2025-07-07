@@ -454,10 +454,10 @@
 
 #define sonlu_mu std::isfinite
 #define sonsuz_mu std::isinf
-#define nan_mi std::isnan
+#define nan_mı std::isnan
 #define normal_mi std::isnormal
-#define sayi_sinifi std::fpclassify
-#define isaret_biti std::signbit
+#define sayı_sınıfı std::fpclassify
+#define işaret_biti std::signbit
 
 
 
