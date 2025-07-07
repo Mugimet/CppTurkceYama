@@ -393,23 +393,23 @@
 
 // --- <cmath> Kütüphanesi ---
 
-#define karekok std::sqrt
-#define kupkok std::cbrt
-#define us_al std::pow
-#define oklid_uzaklik std::hypot
+#define karekök std::sqrt
+#define küpkök std::cbrt
+#define üs_al std::pow
+#define öklid_uzaklık std::hypot
 
 #define mutlak std::abs
 #define mutlak_fabs std::fabs
 #define mutlak_fabsf std::fabsf
 #define mutlak_fabsl std::fabsl
 
-#define ondalik_mod std::fmod
+#define ondalık_mod std::fmod
 #define kalan std::remainder
-#define kalan_ve_bolum std::remquo
+#define kalan_ve_bölum std::remquo
 
-#define e_uzeri std::exp
-#define iki_uzeri std::exp2
-#define e_uzeri_eksi_bir std::expm1
+#define e_üzeri std::exp
+#define iki_üzeri std::exp2
+#define e_üzeri_eksi_bir std::expm1
 
 #define log std::log
 #define log10 std::log10
@@ -418,12 +418,12 @@
 
 #define tavana_yuvarla std::ceil
 #define tabana_yuvarla std::floor
-#define tam_kismi_al std::trunc
+#define tam_kısmı_al std::trunc
 #define yuvarla std::round
 #define long_yuvarla std::lround
 #define longlong_yuvarla std::llround
 
-#define modlu_ayir std::modf
+#define modlu_ayır std::modf
 
 #define sinüs std::sin
 #define kosinüs std::cos
