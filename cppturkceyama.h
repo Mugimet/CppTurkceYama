@@ -207,6 +207,9 @@
 
 #define sabit const
 #define boyut sizeof
+#define boyut_t size_t
+#define imzalı_boyut_t ssize_t
+#define işaretçi_farkı_t ptrdiff_t
 
 #define doğru true
 #define yanlış false
